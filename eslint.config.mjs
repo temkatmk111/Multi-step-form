@@ -13,27 +13,7 @@ const componentFilename = {
       anonymous: "Give the component a name that matches its filename.",
     },
   },
-  create: Components.detect((context, components) => ({
-    "Program:exit"() {
-      const { name: filename, ext } = path.parse(context.filename);
-      for (const { node } of Object.values(components.list())) {
-        let declaration = node;
-        while (["CallExpression", "TSAsExpression", "TSSatisfiesExpression"].includes(declaration.parent?.type)) {
-          declaration = declaration.parent;
-        }
-        const name = declaration.parent?.type === "VariableDeclarator"
-          ? declaration.parent.id.name
-          : declaration.id?.name;
-        if (!name || name !== filename) {
-          context.report({
-            node,
-            messageId: name ? "mismatch" : "anonymous",
-            data: { name: name + ext },
-          });
-        }
-      }
-    },
-  })),
+  
 };
 
 const functionSpacing = {

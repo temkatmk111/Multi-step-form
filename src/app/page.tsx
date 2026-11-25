@@ -6,14 +6,19 @@ import SplashCursor from "@/components/animated/SplashCursor";
 import GlassSurface from "@/components/animated/GlassSurface";
 import { RegisterForm } from "@/components/register/form/RegisterForm";
 
-const headline = "Every great story\nbegins with a name.\nLet this be the start\nof yours.";
+const headline =
+  "Every great story\nbegins with a name.\nLet this be the start\nof yours.";
 
 const Home = () => {
   return (
-    <div className="isolate mx-auto flex min-h-screen w-full max-w-344 flex-col px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <div className=" isolate mx-auto flex min-h-screen w-full max-w-344 flex-col px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
       {/* <SplashCursor colors={["#9955ff", "#ce96ff", "#7b72ff"]} rainbow={false} quality="low" glow={0.35} intro={false} zIndex={-1} style={{ opacity: 0.8 }} /> */}
+
       <header className="relative z-1 flex items-center border-b border-[#cab0ef24] py-2 lg:py-4">
-        <Link href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tight">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-2xl font-bold tracking-tight"
+        >
           <span className="grid text-[#211030] bg-[#c5a6ff] rounded-xl size-8 place-items-center">
             <Image src="/icon.svg" alt="" width={32} height={32} />
           </span>
@@ -39,12 +44,17 @@ const Home = () => {
             />
           </h1> */}
           <p className="mx-[5%] mt-2 hidden max-w-[31ch] leading-relaxed text-[#cfc2df] lg:block">
-            Create your Astra profile in three steps. Your progress is saved each time you select Continue.
+            Create your Astra profile in three steps. Your progress is saved
+            each time you select Continue.
           </p>
         </section>
 
         <div className="flex min-w-0 flex-col justify-center">
-          <GlassSurface width="100%" height="auto" contentClassName="h-auto flex-col items-stretch p-0">
+          <GlassSurface
+            width="100%"
+            height="auto"
+            contentClassName="h-auto flex-col items-stretch p-0"
+          >
             <RegisterForm />
           </GlassSurface>
         </div>
