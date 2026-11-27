@@ -5,7 +5,7 @@ import { Form } from "react-hook-form";
 
 export const FirstForm = ({ form }: StepComponentProps) => {
   return (
-    <div className="mt-30">
+    <div className="mt-30 gap-2.5">
       <div className="space-y-5 flex gap-5 ">
         <Name control={form.control} name="firstname" />
         <Name   control={form.control} name="lastname" />

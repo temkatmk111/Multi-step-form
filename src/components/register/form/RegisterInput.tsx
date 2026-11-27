@@ -5,23 +5,18 @@ import { SecondForm } from "./SecondForm";
 import { LastForm } from "./LastForm";
 import { Success } from "./Success";
 
-type RegisterInputType ={
-    step:FormStep | 3
-    
-}& StepComponentProps
+type RegisterInputType = {
+  step: FormStep | 3;
+} & StepComponentProps;
 
-const stepCompoents = [FirstForm,SecondForm,LastForm,Success] as const;
+const stepCompoents = [FirstForm, SecondForm, LastForm, Success] as const;
 
-export const RegisterInput = ({step,form}:RegisterInputType) => {
+export const RegisterInput = ({ step, form }: RegisterInputType) => {
+  if (step === 3) {
+    const Success = stepCompoents[step];
+    return <Success />;
+  }
+  const ActiveStep = stepCompoents[step];
 
-if (step===3) {
-    const Success = stepCompoents[step]
-    return <Success />
-}
-const ActiveStep = stepCompoents[step]
-
-
-  return <ActiveStep form={form } />;
-
-  
+  return <ActiveStep form={form} />;
 };

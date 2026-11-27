@@ -43,13 +43,13 @@ const Home = () => {
               fontFamily="Georgia, serif"
             />
           </h1> */}
-          <p className="mx-[5%] mt-2 hidden max-w-[31ch] leading-relaxed text-[#cfc2df] lg:block">
+          <p className="mx-[5%] w-136 mt-2 hidden max-w-[31ch] leading-relaxed text-[#cfc2df] lg:block">
             Create your Astra profile in three steps. Your progress is saved
             each time you select Continue.
           </p>
         </section>
 
-        <div className="flex min-w-0 flex-col justify-center">
+        <div className="flex w-136 flex-col justify-center">
           <GlassSurface
             width="100%"
             height="auto"
